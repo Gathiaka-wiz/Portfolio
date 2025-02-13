@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Wizard | Web Developer</title>
+    <link rel="stylesheet" href="./src/styles/index.css".css">
+</head>
+<body>
+
+    <div id="body"></div>
+    
+    <nav class="nav-bar">
+        <ul class="nav-elements">
+            <li>
+                <a href="#Home">Home</a>
+            </li>
+            <li>
+                <a href="#Projects">Projects</a>
+            </li>
+            <li>
+                <a href="#About-Me">About-Me</a>
+            </li>
+            <li>
+                <a href="#Contact-me">Contact-me</a>
+            </li>
+        </ul>
+        <div class="mobile-nav">
+            <details>
+                <summary>
+                    <span></span><span id="center"></span><span></span>
+                </summary>
+                <ul>
+                    <li>
+                        <a href="#Home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#Projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#About-Me">About-Me</a>
+                    </li>
+                    <li>
+                        <a href="#Contact-me">Contact-me</a>
+                    </li>
+                </ul>
+            </ul>
+            </details>
+        </div>
+    </nav>
+
+    <header class="heading scroll-container section" id="Home">
+        <h1 class="intro">
+            Hi , i am John Gathiaka,<br>A Frontend-web Developer<br> <span>........................</span>
+        </h1>
+
+        <div class="button">
+            <a href="#Projects">
+                <button class="projects-btn">See My work ➡</button>
+            </a>
+        </div>
+
+    </header>
+
+
+
+    <div class="projects-section scroll-container" id="Projects">
+        <div class="project section"></div>
+        <div class="project section"></div>
+        <div class="project section"></div>
+        <div class="project section"></div>
+    </div>
+
+
+    <main class="about-me-section scroll-container" id="About-Me">
+        <section class="top">
+            <aside class="profile-pic section"></aside>
+            <aside class="about-me-text section">
+                <h1>Something About Me</h1>
+                <p>
+                Hey there! i'm Gathiaka, a passionate freelance web developer who thrives on turning ideas into interactive , high-performance web experience.
+                I specialize in frontend development. I enjoy solving complex problems, building intuitive Uis.
+                For me web development isn't about just writing code; it's about creating seamless digital experiences.
+                I started as a self-taught developer, constantly pushing my limits to improve.
+                Now,i'm focused on mastering full-stack development.
+                My goal? to create web solutions that stand out and make an impact.
+                If your looking for a developer who loves a challenge and delivers top-tier results,Let's connect!  
+                </p>
+                <a href="#Contact-me" style="text-decoration: none;">
+                    <button>Reach out</button>
+
+                </a>
+            </aside>
+        </section>
+        <section class="bottom section">
+            <h1>My Skills</h1>
+            <div class="skills">
+                <article class="skill">
+                    <abbr title="Hypertext Markup Language">
+                        <img src="./src/assets/icons/skills/html.png" alt="html" id="html">
+                    </abbr>
+                    <h2>Html</h2>
+                </article>
+                <article class="skill">
+                    <abbr title="Cascading Stylesheet">
+                        <img src="./src/assets/icons/skills/css3.png" alt="Css">
+                    </abbr>
+                    <h2>Css </h2>
+                </article>
+                <article class="skill">
+                    <abbr title="JavaScript">
+                        <img src="./src/assets/icons/skills/js2.png" alt="JavaScript">
+                    </abbr>
+                    <h2>JavaScript</h2>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <div class="contact-me-section scroll-container" id="Contact-me">
+
+        <div class="top">
+            <div class="left section">
+                <form  id="smsForm">
+                    <!-- <h1>Send Me a Message</h1> -->
+                    <input type="text" id="Name" name="Name" required placeholder="* Your name">
+                    <input type="email" id="Email" name="Email" required placeholder="* Your Email">
+                    <input type="text" id="Subject" name="Subject" required placeholder="* Enter a subject">
+                    <textarea type="text" id="Message" name="message" required placeholder="* Your Message"></textarea>
+                    <button type="submit" id="send-btn">Send</button>
+                </form>
+            </div>
+            <div class="right section">
+                <p>Name: John Gathiaka W.</p>
+                <p>Number: +254 796 810 121</p>
+                <p></p>
+                <p>Address: Gatundu     Kiambu      Kenya    Africa</p>
+                <p>Email: johngathiakaw@gmail.com</p>
+
+            </div>
+        </div>
+
+        <footer class="section">
+            <abbr title="X">
+                <a href="">
+                    <img src="./src/assets/icons/socials/twitter.png" alt="X">
+                </a>
+            </abbr>
+            
+            <abbr title="Instagram">
+                <a href="">
+                    <img src="./src/assets/icons/socials/ig.png" alt="Instagram-ico">
+                </a>
+            </abbr>
+            
+            <abbr title="Facebook">
+                <a href="">
+                    <img src="./src/assets/icons/socials/fb.png" alt="Facebook-ico">
+                </a>
+            </abbr>
+            
+            <abbr title="Linkedin">
+                <a href="">
+                    <img src="./src/assets/icons/socials/linkedin.png" alt="Linkedin-ico">
+                </a>
+            </abbr>
+            
+            <abbr title="Github">
+                <a href="">
+                    <img src="./src/assets/icons/socials/github2.png" alt="Github-ico">
+                </a>
+            </abbr>
+            
+            <abbr title="Tik-tok">
+                <a href="">
+                    <img src="./src/assets/icons/socials/tik-tok.png" alt="Tik-tok-ico">
+                </a>
+            </abbr>
+        </footer>
+    </div>
+
+
+    <script src="./src/js/main.js"></script>
+    <script>
+        document.addEventListener("wheel",(e) => {
+            e.preventDefault();//prevent default scrolling
+
+            const isMobile = window.innerWidth <= 768; 
+
+            const targets = isMobile 
+            ? document.querySelectorAll(".section")
+            :document.querySelectorAll(".scroll-container");
+
+            if(targets.length === 0) return;
+
+            const currentScroll = window.scrollY;
+            let currentIndex = 0;
+
+            targets.forEach((el,index) => {
+                if(currentScroll >= el.offsetTop){
+                    currentIndex = index;
+                }
+            });
+
+            let nextIndex = currentIndex + (e.deltaY > 0 ? 1 : -1);
+            nextIndex = Math.max(0,Math.min(nextIndex,targets.length - 1 ));
+
+            window.scrollTo({
+                top:targets[nextIndex].offsetTop,
+                behavior:"smooth"
+            });
+        }, {passive: false});
+    </script>
+</body>
+</html>
