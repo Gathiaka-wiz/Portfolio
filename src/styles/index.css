@@ -1,0 +1,866 @@
+/*!........................................................ 
+
+/                  FONT IMPORT
+
+...........................................................*/
+
+@font-face {
+    font-family:Inter-Regular;
+    src: url(../assets/fonts/inter/Inter-Regular.otf);
+}
+
+@font-face {
+    font-family:Inter-Medium;
+    src: url(../assets/fonts/inter/Inter-Medium.otf);
+}
+
+@font-face {
+    font-family:Inter-Bold;
+    src: url(../assets/fonts/inter/Inter-Bold.otf);
+}
+
+@font-face {
+    font-family:Inter-ThinItalic;
+    src: url(../assets/fonts/inter/Inter-ThinItalic-BETA.otf);
+}
+
+@font-face {
+    font-family:Inter-Thin-Beta;
+    src: url(../assets/fonts/inter/Inter-Thin-BETA.woff);
+}
+
+@font-face {
+    font-family:Almarai-ExtraBold;
+    src: url(../assets/fonts/Almarai-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family:anton;
+    src: url(../assets/fonts/anton.ttf);
+}
+
+/*........................................................ 
+
+/         -------------------- ROOT -----------------
+
+...........................................................*/
+
+:root{
+    --btn-color:#0d2753;
+    --btn-bcg-color:#ffffff;
+    --color:#ffffff;
+    --border-color:#0044ff;
+    --container-bcg:rgba(0,0,0,0.35);
+}
+
+
+
+
+
+/*........................................................ 
+
+/                   GENERAL STYLES
+
+...........................................................*/
+
+button{
+    width: 298px;
+    padding: 10px;
+    color: var(--btn-color);
+    background-color: var(--btn-bcg-color);
+    font-family: anton;
+    font-size: 30px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.6s  ease-in-out;
+
+    &:hover{
+        box-shadow: 0  0 10px #6ea6e6,  0  0 10px #7b7bf8;
+    }
+}
+
+h1{
+    color: var(--color);
+    font-family:Inter-Bold;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: var(--color);
+    font-family: Inter-Regular;
+    scroll-snap-type:y mandatory;
+    /* overflow: hidden; */
+}
+
+.heading .button a ,
+button{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.projects-section .project,
+.about-me-section .bottom,
+.about-me-section .top aside,
+.contact-me-section .left,
+.contact-me-section .right,
+.contact-me-section footer{
+    border:1px solid var(--border-color);
+    border-radius: 10px;
+    background:var(--container-bcg) ;
+    background-blend-mode: normal;
+}
+
+.projects-section,
+.about-me-section,
+.contact-me-section{
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+/*........................................................ 
+
+/                   BACKGROUND COLOR
+
+.........................................................*/
+
+
+#body{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-image: linear-gradient(-45deg, #0c075d 0%, #040811 0%, #0e2958 100%, #0c254e 100%, #0d2753 100%);
+    z-index: -30000;
+    font-family: Inter-Regular;
+    /* background-blend-mode: normal; */
+}
+
+
+
+/*........................................................
+
+/                       NAVIGATION BAR
+
+...........................................................*/
+
+
+.nav-bar {
+    position:fixed;
+    left: 0;
+    right:0;
+    top:0;
+    z-index: 2;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #152ac9;
+    height: 45px;
+}
+
+
+.nav-bar .nav-elements{
+    display:flex;
+    align-items:center ;
+    justify-content: space-evenly;
+}
+
+.nav-bar .nav-elements li{
+    list-style: none;
+    padding-top:5px;
+}
+
+.nav-bar .nav-elements li a{
+    text-decoration: none;
+    color: var(--color);
+    font-family:Inter-ThinItalic;
+    /* font-family:'Courier New', Courier, monospace; */
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 200;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.nav-bar .mobile-nav{
+    display: none;
+    justify-content: end;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav-bar .mobile-nav details  {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    /* right: 90%; */
+    list-style: none;
+}
+.nav-bar .mobile-nav details summary{
+    display: grid;
+    /* position: absolute; */
+    justify-content: right;
+}
+.nav-bar .mobile-nav details summary #center{
+    width:40px ;
+}
+
+.nav-bar .mobile-nav details summary span{
+    display: inline-block;
+    height: 4px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-right: 4px;
+    width: 50px;
+    border-radius: 5px;
+    background-color:#ffffff;
+}
+
+.nav-bar .mobile-nav details ul {
+    z-index: 2;
+    padding: 15px ;
+    background-color: transparent;
+    background-color:  rgba(2, 22, 53, 0.979);
+    backdrop-filter: blur(20px);
+    border: 1px solid #152ac9;
+    border-radius: 10px;
+}
+
+.nav-bar .mobile-nav details ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+.nav-bar .mobile-nav details ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: ThinItalic;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 100;
+    padding-bottom: 15px;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+/*........................................................ 
+
+/                   HOME PAGE SECTION
+
+...........................................................*/
+
+.heading{
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+}
+
+.heading .intro{
+    height: 264px;
+    font-family:Almarai-ExtraBold;
+    letter-spacing: -0.2px;
+    margin-top: 15%;
+    color: var(--color);
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 71.5px;
+    text-decoration: none;
+}
+
+.heading .intro span{
+    letter-spacing: 20px;
+}
+
+
+
+/*........................................................ 
+
+/                   PROJECTS SECTION 
+
+...........................................................*/
+
+
+
+.projects-section {
+    display: grid;
+    grid-template-columns:repeat(2,47vw);
+    grid-template-rows:repeat(2,43vh);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-section .project {
+    width: 100%;
+    height: 100%;
+    border-radius: 27px;
+    transition: border 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover{
+        box-shadow:0 0 10px #b2d2ec ;
+    }
+}
+
+
+
+/*........................................................
+
+/                    ABOUT ME SECTION
+
+.........................................................*/
+
+.about-me-section{
+    display: grid;
+    justify-content: center;
+    gap: 0px;
+}
+
+.about-me-section .top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 30px;
+}
+
+
+
+.about-me-section .top .profile-pic{
+    width: 300px;
+    height: 300px;
+    background-image:url(../images/me.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* background-position: fixed; */
+    /* filter: grayscale(1); */
+}
+
+.about-me-section .top .about-me-text{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: fit-content;
+    /* height: 300px; */
+    padding: 10px;
+}
+
+.about-me-section .top .about-me-text p{
+    font-family: Inter-Regular;
+    text-align: left;
+    font-size: 18px;
+    line-height:27px ;
+    padding: 10px;
+}
+
+.about-me-section .top .about-me-text button{
+    margin: auto;
+    width: 210px;
+    height: 51px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Inter-Light;
+}
+
+.about-me-section .bottom{
+    height: 240px;
+    width: 95vw;
+}
+
+.about-me-section .bottom .skills {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    height: 100%;
+    width: 100%;
+} 
+
+.about-me-section .bottom .skills .skill{
+    width: 190px;
+    text-align: center;
+}
+.about-me-section .bottom .skills .skill img{
+    width: 100px;
+    height: 100px;
+    color: #808080;
+}
+
+.about-me-section .bottom .skills .skill img #html{
+    width:150px;
+    height:150px;
+}
+
+
+/*........................................................
+
+/                    CONTACT ME SECTION
+
+.........................................................*/
+
+.contact-me-section{
+    justify-content: center;
+}
+
+.contact-me-section .top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    margin-bottom: 10px;
+}
+
+.contact-me-section .top .left form{
+    display: grid;
+    width:48vw;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.contact-me-section .top .left form input,
+.contact-me-section .top .left form textarea{
+    width: 594px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: Inter-Regular;
+    overflow: hidden;
+    white-space: nowrap;
+    white-space: ellipsis;
+    text-align: center;
+    font-size: 15px;
+
+    &::placeholder{
+        font-family: Inter-Regular;
+        font-size: 15px;
+        font-weight: 400;
+        color: #333;
+        text-align: center;
+    }
+
+    &:focus{
+        border: none;
+        outline: none;
+        border: #0044ff 2px solid ;
+    }
+}
+
+.contact-me-section .top .left #Message{
+    width: 594px;
+    height: 200px;
+    line-height: 22.5px;
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 20px;
+
+}
+
+.contact-me-section .top .left #send-btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: #ffffff;
+    background-blend-mode: normal;
+    font-family: Inter-Bold;
+    color: #0b0b3d;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+}
+
+
+.contact-me-section .top .right{
+    font-family: Inter-Medium;
+    width:48vw;
+    padding: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-me-section .top .right p{
+    cursor:default;
+}
+
+.contact-me-section footer{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95px;
+}
+
+.contact-me-section footer abbr ,
+.contact-me-section footer abbr a,
+.contact-me-section footer abbr a img{
+    width: 70px;
+    height: 60px;
+    border-radius: 21px;
+}
+
+/*........................................................
+
+/                    RESPONSIVE DESIGN STYLES           
+
+.........................................................*/
+
+/*?--------------Tablet--Design----------*/
+
+@media screen and (max-width:992px) {
+    .heading{
+        height: 100vh;
+    }
+    .heading .intro{
+        font-size:60px;
+        letter-spacing: -0.2px;
+        line-height: 71.5px;
+    }
+    .heading .intro span{
+        letter-spacing: 18px;
+    }
+    .about-me-section,
+    .contact-me-section{
+        height: 100vh;
+    }
+    .about-me-section {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .about-me-section .top{
+        display: grid;
+        gap: 20px;
+    }
+    .about-me-section .top,
+    .about-me-section .bottom {
+        margin: auto;
+    }
+    .about-me-section .top .profile-pic{
+        margin: auto;
+    }
+    .about-me-section .top .about-me-text{
+        height: max-content;
+        width: 90vw;
+        padding: 10px;
+    }
+    .about-me-section .top .about-me-text p{
+        font-size: 20px;
+        padding: 5px;
+        font-weight:lighter;
+        line-height:28px;
+        letter-spacing: 1.2px;
+    }
+    .contact-me-section .top{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap:5px;
+        margin: auto;
+    }
+    .contact-me-section .top .left,
+    .contact-me-section .top .left form,
+    .contact-me-section .top .right{
+        margin: auto;
+        width:650px;
+        padding: 5px;
+    }
+    .contact-me-section .top .left form input,
+    .contact-me-section .top .left form textarea{
+        font-size: 20px; 
+        
+        &::placeholder{
+            font-size: 20px; 
+            
+        }
+    }
+    .contact-me-section .top .right{
+        height: max-content;
+        font-family: Inter-Thin-Beta;
+        letter-spacing: 1px;
+        font-size: 25px;
+    }
+    .contact-me-section footer{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:800px) {
+    .contact-me-section .top{
+        row-gap: 50px;
+    }
+    .contact-me-section .top .left,
+    .contact-me-section .top .right{
+        height:40vh;
+    }
+}
+
+/*?------------Mobile--Design----------*/
+@media screen and (max-width:768px) {
+    .heading .intro{
+        padding: 10px;
+        width: 90vw;
+        text-align: left;
+    }
+    .heading .intro span{
+        display:  none;
+    }
+    .projects-section {
+        grid-template-columns:repeat(1,0.9fr);
+        grid-template-rows:repeat(4,43vh);
+    }
+    .about-me-section{
+        row-gap: 50px;
+        margin-bottom: 250px;
+    }
+    .about-me-section .top{
+        display: grid;
+    }
+    .about-me-section .top .profile-pic{
+        margin: auto;
+    }
+    .about-me-section .top .about-me-text{
+        width: 90vw;
+        height: 55vh;
+    }
+    .contact-me-section .top{
+        gap: 15px;
+    }
+    .contact-me-section .top .left ,
+    .contact-me-section .top .left form {
+        width: max-content;
+        height: max-content;
+        padding: 20px;
+    }
+    .contact-me-section .top .left form input,
+    .contact-me-section .top .left form textarea{
+        width: 90vw;
+        height: 80px;
+        font-size: 22.5px;
+
+        &::placeholder{
+            font-size: 22.5px;
+        }
+    }
+    .contact-me-section .top .left #Message{
+        width: 90vw;
+        height: 300px;
+    }
+    .contact-me-section .top .left #send-btn{
+        width: 155px;
+        height: 45px;
+        font-size: 25px;
+    }
+    .contact-me-section .top .right{
+        margin-bottom: 10px;
+        height: 50vh;
+        width: 90vw;
+        padding: 20px;
+    }
+    .contact-me-section .top .right p{
+        font-size: 25px;
+        font-family: Inter-Regular;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .nav-bar .nav-elements{
+        display: none;
+    }
+    .nav-bar .mobile-nav{
+        display: grid;
+    }
+    .heading{
+        height:110vh;
+    }
+    .heading .intro{
+        font-size: 45px;
+        line-height:58.5px ;
+    }
+    .projects-section{
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    .about-me-section{
+        height: max-content;
+        margin: 0;
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+    .about-me-section .top {
+        padding: 0;
+    }
+    .about-me-section .top .about-me-text{
+        width: 90%;
+        margin: auto;
+        height: max-content;
+    }
+    .about-me-section .top .about-me-text p{
+        font-size: 16px;
+        font-family: Inter-Thin-Beta;
+        line-height: 22.5px;
+        letter-spacing: 1.8px;
+        font-weight: 100;
+    }
+    .about-me-section .top .about-me-text  button{
+        width: 170px;
+        height: 41px;
+        font-size: 20px;
+    }
+    .about-me-section .bottom {
+        width: 95vw;
+        height: max-content;
+        padding: 10px;
+    }
+    .about-me-section .bottom .skills{
+        margin-top: 10px;
+        font-size: 12px;
+        font-family: Inter-Regular;
+        letter-spacing: 2px;
+        height:max-content ;
+    }
+    .about-me-section .bottom .skills .skill img{
+        width: 80px;
+        height: auto;
+    }
+    .contact-me-section .top .left ,
+    .contact-me-section .top .left form{
+        padding: 6px;
+        width: auto;
+    }
+    .contact-me-section .top .left form input,
+    .contact-me-section .top .left form textarea{
+        height: 50px;
+        margin: auto;
+        margin-bottom: 10px;
+        font-size: 20px;
+        
+        &::placeholder{
+            font-size: 20px;
+        }
+    }
+    .contact-me-section .top .left #Message{
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .contact-me-section .top .left #send-btn{
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .contact-me-section .top .right{
+        width: 95%;
+        height: max-content;
+    }
+    .contact-me-section .top .right{
+        line-height: 60px;
+        padding: 10px;
+    }
+    .contact-me-section .top .right p{
+        font-size: 20px;
+    }
+    .contact-me-section footer abbr ,
+    .contact-me-section footer abbr a,
+    .contact-me-section footer abbr a img{
+        width: 55px;
+        height: 45px;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width:393px) {
+    .about-me-section .top .about-me-text p{
+        font-size: 15px;
+        line-height: 22.5px;
+    }
+    .about-me-section .top .about-me-text button{
+        /* width: 155px; */
+        height: 41px;
+        font-size: 20px;
+    }
+    .contact-me-section{
+        margin-bottom:80px;
+    }
+    .contact-me-section .top .left #Message{
+        height:250px ;
+    }
+    .contact-me-section .top .right p{
+        font-size: 18px;
+    }
+    .contact-me-section footer{
+        margin-top: 0px;
+        height: max-content;
+        padding: 10px;
+    }
+    .contact-me-section footer abbr ,
+    .contact-me-section footer abbr a,
+    .contact-me-section footer abbr a img{
+        width: 42px;
+        height: auto;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .contact-me-section .top .right p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .heading{
+        height: 100vh;
+    }
+    .heading .intro{
+        font-size: 35px;
+        line-height: 45.5px;
+    }
+    .about-me-section .top .about-me-text p{
+        font-family:Inter-Thin-Beta ;
+        font-size: 15px;
+        line-height: 19.5px;
+        font-weight: 100;
+        letter-spacing: 1.2px;
+    }
+    .about-me-section .bottom .skills .skill img{
+        width: 60px;    
+        height: auto;
+    }
+    .contact-me-section .top .right p{
+        font-size: 15px;
+        font-family:Inter-Thin-Beta ;
+        line-height: 50px;
+        font-weight: 100;
+        letter-spacing: 1.2px;
+    }
+    .contact-me-section footer abbr ,
+    .contact-me-section footer abbr a,
+    .contact-me-section footer abbr a img{
+        width: 35px;
+        height: auto;
+        border-radius: 0;
+    }
+}
